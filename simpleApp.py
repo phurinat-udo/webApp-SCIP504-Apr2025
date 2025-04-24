@@ -9,4 +9,4 @@ app.layout = html.Div("Hello, Mars!")
 
 # Run the app
 if __name__ == "__main__":
-    app.run(debug=True, port=36646, host="10.9.41.60")
+    app.run(debug=True, port=36646)
