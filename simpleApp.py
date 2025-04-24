@@ -11,8 +11,15 @@ app.layout = html.Div([
 ])
 
 # Callback to update the text based on number of clicks
+#  @app.callback is a decorator that links the input and output components
+#  The function update_output will be called whenever the button is clicked
+#  The function takes the number of clicks as input and returns a string to be displayed in the output div
+#  The Output specifies which component to update and what property to change
+'''The function following the @app.callback decorator is the callback function.'''
+
 @app.callback(
     Output("output-div", "children"),
+    # Input to trigger the callback
     Input("my-button", "n_clicks")
 )
 def update_output(n_clicks):
